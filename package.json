@@ -1,28 +1,37 @@
 {
-  "name": "datastar-plugin-starter",
+  "name": "datastar-persist",
   "version": "0.1.0",
-  "description": "A starter template for creating Datastar plugins in Typescript",
-  "keywords": ["datastar", "plugin", "starter", "template", "typescript"],
-  "homepage": "https://github.com/Regaez/datastar-plugin-starter#readme",
+  "description": "adds localStorage or sessionStorage data persistence to datastar signals",
+  "keywords": [
+    "datastar",
+    "plugin",
+    "persist",
+    "attribute",
+    "signals"
+  ],
+  "homepage": "https://github.com/insanity54/datastar-persist",
   "bugs": {
-    "url": "https://github.com/Regaez/datastar-plugin-starter/issues"
+    "url": "https://github.com/insanity54/datastar-persist/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Regaez/datastar-plugin-starter.git"
+    "url": "git+https://github.com/insanity54/datastar-persist.git"
   },
   "license": "MIT",
-  "author": "Thomas Threadgold",
+  "author": "Chris Grimmett <chris@grimtech.net>",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "node esbuild.mjs",
-    "watch": "node esbuild.dev.mjs"
+    "watch": "node esbuild.dev.mjs",
+    "test": "vitest",
+    "test:browser": "vitest"
   },
   "devDependencies": {
-    "datastar": "github:starfederation/datastar#v1.0.0-RC.6",
-    "esbuild": "0.27.0",
-    "typescript": "5.9.3"
-  },
-  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a"
+    "@vitest/browser-playwright": "^4.0.16",
+    "datastar": "@starfederation/datastar-typescript",
+    "esbuild": "^0.27.2",
+    "typescript": "5.9.3",
+    "vitest": "^4.0.16"
+  }
 }

@@ -1,11 +1,11 @@
 
 /**
- * Datastar Persist Plugin - Simple Sequential Implementation
+ * Datastar Persist Plugin
  * Handles data-persist attributes for automatic signal persistence to storage
- * No throttling - saves immediately on every signal change
  */
 import { attribute } from "datastar";
 import { effect, getPath, mergePatch, beginBatch, endBatch } from 'datastar';
+
 
 interface PersistConfig {
   storage: Storage;
@@ -141,6 +141,8 @@ attribute({
       console.warn('[Persist Plugin] No config');
       return;
     }
+
+
     console.log('[Persist Plugin] Config:', config);
 
     // Step 1: Load data from storage
